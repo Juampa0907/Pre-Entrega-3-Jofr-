@@ -1,0 +1,27 @@
+{% extends "Usuarios/padre.html" %}
+{% load static %}
+
+{% block cambiante %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Últimas Lanzamientos</title>
+    </head>
+    <body>
+        <h1>Últimos Lanzamientos</h1>
+
+        <ul>
+            {% for videojuego in ultimos_videojuegos %}
+                <li>
+                    <h3>{{ videojuego.nombre }}</h3>
+                    <p>Año de lanzamiento: {{ videojuego.ano_lanzamiento }}</p>
+                    <p>Género: {{ videojuego.genero }}</p>
+                    <p>Desarrollador: {{ videojuego.desarrollador }}</p>
+                    <p>Plataforma: {{ videojuego.plataforma }}</p>
+                    <p>Descripción: {{ videojuego.descripcion }}</p>
+                    <p>Requisitos del sistema: {{ videojuego.requisitos_sistema }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+{% endblock %}

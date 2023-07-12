@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos</title>
+    <link rel="stylesheet" href="{% static 'Usuarios/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Videojuegos</h1>
+    </header>
+    <main>
+        <section id="pc-games">
+            <h2>Videojuegos para PC</h2>
+            <div class="game">
+                <img src="pc-game1.jpg" alt="Game 1">
+                <h3>Nombre del juego 1</h3>
+                <p>Descripción del juego 1.</p>
+            </div>
+            <div class="game">
+                <img src="pc-game2.jpg" alt="Game 2">
+                <h3>Nombre del juego 2</h3>
+                <p>Descripción del juego 2.</p>
+            </div>
+            <!-- Agrega más juegos para PC aquí -->
+        </section>
+        <section id="playstation-games">
+            <h2>Videojuegos para PlayStation</h2>
+            <div class="game">
+                <img src="ps-game1.jpg" alt="Game 1">
+                <h3>Nombre del juego 1</h3>
+                <p>Descripción del juego 1.</p>
+            </div>
+            <div class="game">
+                <img src="ps-game2.jpg" alt="Game 2">
+                <h3>Nombre del juego 2</h3>
+                <p>Descripción del juego 2.</p>
+            </div>
+            <!-- Agrega más juegos para PlayStation aquí -->
+        </section>
+    </main>
+    <script src="{% static 'Usuarios/script.js' %}"></script>
+</body>
+</html>

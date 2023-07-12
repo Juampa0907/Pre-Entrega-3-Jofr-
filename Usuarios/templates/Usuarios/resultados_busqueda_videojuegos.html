@@ -1,0 +1,28 @@
+{% extends "Usuarios/padre.html"%}
+{% load static%}
+{% block cambiante %}
+
+    <h1>Resultados de búsqueda</h1>
+
+    <p>Palabra clave buscada: {{ videojuego_busqueda }}</p>
+
+    {% if resultados %}
+        <ul>
+            {% for videojuego in resultados %}
+                <li>
+                    <h3>{{ videojuego.nombre }}</h3>
+                    <p>Año de lanzamiento: {{ videojuego.ano_lanzamiento }}</p>
+                    <p>Género: {{ videojuego.genero }}</p>
+                    <p>Desarrollador: {{ videojuego.desarrollador }}</p>
+                    <p>Plataforma: {{ videojuego.plataforma }}</p>
+                    <p>Descripción: {{ videojuego.descripcion }}</p>
+                    <p>Requisitos del sistema: {{ videojuego.requisitos_sistema }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+
+
+{%endblock%}

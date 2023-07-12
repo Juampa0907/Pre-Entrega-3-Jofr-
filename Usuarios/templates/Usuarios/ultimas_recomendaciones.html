@@ -1,0 +1,25 @@
+{% extends "Usuarios/padre.html"%}
+{% load static%}
+{% block cambiante %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimas Recomendaciones</title>
+</head>
+<body>
+    <h1>Últimas Recomendaciones</h1>
+
+    <ul>
+        {% for recomendacion in ultimas_recomendaciones %}
+            <li>
+                <h3>{{ recomendacion.videojuego.nombre }}</h3>
+                <p>Usuario: {{ recomendacion.usuario.nomusu }}</p>
+                <p>Comentario: {{ recomendacion.comentario }}</p>
+                <p>Fecha: {{ recomendacion.fecha }}</p>
+                <p>Puntuación: {{ recomendacion.puntuacion }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

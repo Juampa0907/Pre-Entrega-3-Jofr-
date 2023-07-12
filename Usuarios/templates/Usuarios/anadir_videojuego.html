@@ -1,0 +1,12 @@
+{% extends "Usuarios/padre.html"%}
+{% load static %}
+
+{% block cambiante %}
+  <h2>Añadir Videojuego</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ miFormulario.as_p }}
+    <button type="submit">Crear</button>
+  </form>
+{% endblock %}
+
